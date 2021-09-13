@@ -17,11 +17,16 @@
 	box-sizing: border-box;
 }
 
+
 .bg {
 	background-image:url(https://images.unsplash.com/photo-1504829857797-ddff29c27927?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
 	background-position: 0 -150px;
 	width: 100%;
 	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	background-size: cover;
 	position: fixed;
 	z-index: -1;
@@ -41,6 +46,7 @@
 
 
 
+
 }
 
 li, a, button {
@@ -53,12 +59,14 @@ li, a, button {
 }
 
 .navlink li {
+
 	display: inline-block;
 	padding: 10px;
 	transition: 0.3s ease;
 }
 
 .navlink li a{
+
 	margin-right: 7px;
 	transition: 0.3s ease;
 }
@@ -126,7 +134,6 @@ button:hover {
 	height: 220px;
 	background-color: transparent;
 	margin: 20px auto;
-
 	display: flex;
 	justify-content: center ;
 	align-items: center;
@@ -148,6 +155,7 @@ button:hover {
 	width: 100px;
 	height: 100px;
 	background-size: cover;
+	transform: translate(10px, 5px) scale(1.2);
 }
 
 .gambar2 {
@@ -155,6 +163,8 @@ button:hover {
 	height: 100px;
 	background-size: cover;
 	background-position: -10px;
+	transform: translate(5px, 5px) scale(1.2);
+
 
 }
 
@@ -163,6 +173,8 @@ button:hover {
 	height: 100px;
 	background-size: cover;
 	background-position: -5px -10px;
+	transform: translate(5px, 5px) scale(1.2);
+
 
 }
 
@@ -171,6 +183,7 @@ button:hover {
 	height: 100px;
 	background-size: cover;
 	background-position: 0px;
+	transform: translate(5px, 5px) scale(1.2);
 
 }
 
@@ -179,6 +192,7 @@ button:hover {
 	height: 100px;
 	background-size: cover;
 	background-position: -5px;
+	transform: translate(5px, 5px) scale(1.2);
 
 }
 
@@ -187,10 +201,11 @@ button:hover {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-	overflow: hidden ;
+	overflow: hidden;
 	margin: 0 20px;
 	display: inline-block;
-	border: 2px solid black
+	border: 1px solid black;
+
 	
 
 }
@@ -212,6 +227,7 @@ button:hover {
 	opacity: 0;
 	transition: 0.3s;
 	transform: scale(0);
+	overflow: hidden;
 }
 
 .galeri li a:hover span{
@@ -228,17 +244,24 @@ button:hover {
 	margin: auto;
 	text-align: justify;
 	color: white;	
+	display: flex;
+	flex-direction: column;
 }
 
 .content1 h1 {
 	font-family: 'Roboto Slab', serif;
 	font-size: 45px;
 	text-align: center;
+	justify-content: center;
+
+
 }
 
 .content1 p {
 	font-family: 'Roboto Slab', serif;
 	font-size: 20px;
+	justify-content: center;
+	
 }
 
 /*-------------------------blog-------------------------*/
@@ -372,10 +395,12 @@ button:hover {
 .container3 {
 	width: 70%;
 	height: 400px;
-	margin: auto;
+	display: flex;
+	justify-content: center;
 }	
 
 .container3 h1 {
+	justify-content: center;
 	text-align: center;
 	font-size: 40px;
 	font-family: 'Roboto Slab', serif;
@@ -385,6 +410,7 @@ button:hover {
 
 .isi {
 	width: 500px;
+	justify-content: center;
 	margin: auto;
 	font-size: 25px;
 	font-family: 'Roboto Slab', serif;
