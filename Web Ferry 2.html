@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web ferry 2</title>
+
+<style>
+	
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+}
+
+li, a, button {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+/*header*/
+header {
+	display: flex;
+	justify-content: flex-end ;
+	align-items: center;
+	position: relative;
+	padding: 20px 10%;
+
+}
+
+.bg{
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(5, 6, 32, 0.7);
+	background-image: url(https://images.unsplash.com/photo-1504829857797-ddff29c27927?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -10;
+	filter: blur(5px) brightness(0.5);
+	background-position: 0px -120px;
+}
+
+
+
+/*logo*/
+.logo {
+	border-radius: 50%;
+	cursor: pointer;
+	margin-right: auto;
+
+}
+
+/*navlink*/
+.navlink {
+	list-style: none;
+}
+
+.navlink li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.navlink li a{
+	transition: all 0.3s ease 0s;
+}
+
+.navlink li a:hover{
+	color: 	#5f9ea0;
+}
+
+
+/*btn contact*/
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 111px;
+	height: 36px;
+	padding: 9px;
+	border-radius: 5px;
+	border: 1px solid #ecf0f1 ;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+
+}
+
+button:hover {
+	border: 1px solid #5f9ea0;
+	background-color: #5f9ea0;
+	
+}
+
+.utama {
+	width: 800px;
+	height: 500px;
+	margin-left: 900px;
+	margin-top: 170px;
+}
+
+.caption {
+	width: 700px;
+	height: 300px;
+	color: white;
+	transform: translate(-700px, -350px);
+	font-family: 'Playfair Display', serif;
+}
+
+.caption h1 {
+	padding: 10px;
+	font-weight: 800;
+	font-size: 40px;
+
+}
+
+.caption p {
+	padding: 10px;
+	font-size: 28px;
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="bg"></div>
+<header>
+	<img class="logo" src="C:/logo.jpg">
+<nav>
+	<ul class="navlink">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Blog</a></li>
+	</ul>
+</nav>
+
+	<a href="#"><button>Contact</button></a>
+
+</header>
+
+<div class="utama">
+
+<script src="https://fast.wistia.com/embed/medias/0m94i7lem7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_0m94i7lem7 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/0m94i7lem7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+
+<div class="caption">
+	<h1>ICELAND</h1>
+	<p>Iceland is a Nordic island country in the North Atlantic Ocean and the most sparsely populated country in Europe. The capital and largest city is Reykjavík</p>
+</div>
+</div>
+
+
+
+</body>
+</html>
