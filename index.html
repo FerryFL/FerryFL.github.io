@@ -22,9 +22,9 @@
 }
 
 body {
-
-
+	overflow-x: hidden;
 }
+
 
 .bg {
 	background-image:url(https://images.unsplash.com/photo-1504829857797-ddff29c27927?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
@@ -45,23 +45,34 @@ body {
 .header {
 	width: 100%;
 	height: 100px;
-	/*background-color: #ddd;*/
-	margin: 10px auto;
+
+	background-color: #5f9ea0;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	padding: 10px 10%;
+	position: fixed;
+	z-index: 3;
 
 
+}
 
+.burger {
+		display: none;
+	}
 
+	.burger div {
+		width: 25px;
+		height: 3px;
+		background-color: rgb(226, 226, 226);
+		margin: 5px;
 }
 
 li, a, button {
 	font-family: 'Kaisei HarunoUmi', serif;
 	font-weight: 650;
 	font-size: 17px;
-	color: #ffffff;
+	color: rgb(226, 226, 226);
 	text-decoration: none;
 
 }
@@ -81,7 +92,7 @@ li, a, button {
 
 
 .navlink li a:hover {
-	color: #5f9ea0;
+	color: #fff;
 	transition: 0.3s ease;
 
 }
@@ -104,22 +115,29 @@ button:hover {
 
 .content {
 	width: 100% ;
-/*	background-color: black;*/
+
+	/*background-color: black;*/
+	transform: translate(0, 26%);
+	display: flex;
+	align-items: center;
 
 }
 
 
 .video {
-	width: 800px;
-	height: 650px;
-	transform:translate(900px, 150px);
+	width: 60%;
+	padding: 70px;
+/*	transform:translate(900px, 150px);*/
 
 }
 
 .caption {
-	width: 550px;
-	height: 200px;
-	transform: translate(300px, -400px);
+	width: 40%;
+	padding: 20px;
+	align-items: center;
+/*	transform: translate(300px, 00px);*/
+	/*background-color: #ddd;*/
+	
 }
 
 .caption h1 {
@@ -136,72 +154,116 @@ button:hover {
 
 }
 
+@media (max-width: 900px ) {
+	
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.video {
+		padding: 0;
+	}
+
+	.caption {
+		width: 85%;
+		margin: auto;
+	}
+
+}
+
+@media (max-width: 1100px ) {
+	.video {
+		padding: 30px;
+	}
+} 
+
+@media (max-width:  768px) {
+	
+	body {
+		overflow-x: hidden;
+	}
+
+	.navlink { 
+		background-color: #5f9ea0;
+		position: fixed;
+		right: 0;
+		height: 95vh;
+		width: 60%;
+		top: 7vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		transform: translateX(100%);
+		transition: 0.5s;
+		
+	}
+
+
+
+	.burger {
+		display: block;
+		cursor: pointer
+	}
+
+	.navaktif {
+		transform: translateX(0);
+		transition: 0.5s;
+	}
+
+}
 
 
 /*-------------------------about-------------------------*/
 .kotak {
-	width: 900px;
-	height: 220px;
-	background-color: transparent;
+	width: 90%;
+	transform: translateY(300px);
+	/*background-color: #eee;*/
 	margin: 20px auto;
 	display: flex;
 	justify-content: center ;
 	align-items: center;
-
-}
-
-.kotakgambar {
-
 	position: relative;
+	flex-direction: column;
 
 }
+
 
 .galeri {
-
+	width: 90%;
+	padding: 10px;
+	/*background-color: white;*/
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	margin-top: 20px;
 }
 
 
 .gambar1 {
-	width: 100px;
-	height: 100px;
+	width: 100%;
 	background-size: cover;
 
 }
 
 .gambar2 {
-	width: 100px;
-	height: 100px;
-	background-size: cover;
-	background-position: -10px;
-
-
+	width: 100%;
 
 }
 
 .gambar3 {
-	width: 100px;
-	height: 100px;
-	background-size: cover;
-	background-position: -5px -10px;
-
+	width: 100%;
 
 }
 
 .gambar4 {
-	width: 100px;
-	height: 100px;
-	background-size: cover;
-	background-position: 0px;
-
+	width: 100%;
 
 }
 
 .gambar5 {
-	width: 100px;
-	height: 100px;
-	background-size: cover;
-	background-position: -5px;
-
+	width: 100%;
 
 }
 
@@ -214,38 +276,6 @@ button:hover {
 	margin: 0 20px;
 	display: inline-block;
 	border: 1px solid black;
-
-	
-
-}
-
-.galeri li span {
-	display: block;
-	width: 100px;
-	height: 100px;
-	font-weight: bold;
-	background-color: rgba(200, 200, 200, 0.5);
-	border-radius: 50%;
-	text-decoration: none;
-	position: absolute;
-	top: 0px;
-	text-align: center;
-	line-height: 100px;
-	color: #000;
-	text-shadow: 0px 0px 0px 4px  rgba( 255, 255, 255, 0.8);
-	opacity: 0;
-	transition: 0.3s;
-	transform: scale(0);
-	overflow: hidden;
-}
-
-.galeri li a:hover span{
-	opacity: 1;
-	transform: scale(1.0);
-}
-
-.galeri li .gambar1 {
-	border-radius:50% ;
 }
 
 .content1 {
@@ -273,6 +303,8 @@ button:hover {
 	
 }
 
+
+
 /*-------------------------blog-------------------------*/
 
 
@@ -283,15 +315,18 @@ button:hover {
 }
 
 .container2 { 
+	display: flex;
 	font-family: karla;
-	width: 1300px;
-	margin: auto;
+	width: 80%;
 	color: white;
 	background-color: ;
 	list-style-position: inside;
-	margin-top: 400px;
+	transform: translateY(400px);
+	flex-direction: column;
+	margin: auto;
 
 }
+
 
 .gambarblog { 
 	height: 250px;
@@ -349,10 +384,11 @@ button:hover {
 .content2 { 
 	margin: auto;
 	font-size: 20px;
-	width: 800px;
+	width: 80%;
 	padding: 40px;
 	font-family:sans-serif;
 
+	justify-content: center;
 }
 
 
@@ -419,6 +455,7 @@ button:hover {
 
 .isi {
 	width: 500px;
+	transform: translateY(230px);
 	justify-content: center;
 	margin: auto;
 	font-size: 25px;
@@ -446,83 +483,90 @@ button:hover {
 		<li><a href="#">Home</a></li>
 		<li><a href="#about">About</a></li>
 		<li><a href="#blog">Blog</a></li>
+		<li><a href="#"><button><a href="#contact">Contact Us</a></button></a></li>
 	</ul>
+
+	<div class="burger">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	
 </nav>
-<a href="#"><button><a href="#contact">Contact Us</a></button></a>
+
 
 </div>
 
 <div class="content">
+
 <div class="video">
 	<script src="https://fast.wistia.com/embed/medias/wtndc1yk7b.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:55.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wtndc1yk7b videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/wtndc1yk7b/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
 
 </div>
+
 <div class="caption">
 <h1>Coding & Programming</h1>
 <br>
 <p>is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific task. Programming involves tasks such as: analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms in a chosen programming language 
-	<br><br><br><br>Website Made By : Ferry, Steven Yong, Steven Wielis, Filbert, & Ignatius
+
 </p>
 </div>
+
+
 </div>
 
 <div class="bg"></div>
 
 <div class="kotak" id="about">
 
-		<div class="kotakgambar">
+	
 		<ul class="galeri">
 			<li>
-				<a href="#">
-
+		
 				<div class="gambar1"><img src="img/ftferry.jpeg"></div>
-				<span>Ferry FL</span>
-				</a>
+		
 
 				<div class="overlay" id="gambar1">
 					
 				</div>
 			</li>
 			<li>
-				<a href="#">
+			
 				<div class="gambar2"><img src="img/ftyong.jpeg"></div>
-				<span>Steven Y</span>
-				</a>
+
+			
 				<div class="overlay" id="gambar2">
 					
 				</div>
 			</li>
 			<li>
-				<a href="#">
+				
 				<div class="gambar3"><img src="img/ftwielis.jpeg"></div>
-				<span>Steven W</span>
-				</a>
+
 				<div class="overlay" id="gambar3">
 
 
 				</div>
 			</li>
 			<li>
-				<a href="#">
+				
 				<div class="gambar4"><img src="img/ftfilbert.jpeg"></div>
-				<span>Filbert</span>
-				</a>
+			
 				<div class="overlay" id="gambar4">
 
 				</div>
 			</li>
 			<li>
-				<a href="#">
+				
 				<div class="gambar5"><img src="img/ftiyus.jpeg"></div>
-				<span>Ignatius</span>
-				</a>
+		
 				<div class="overlay" id="gambar5">
 					
 				</div>
 			</li>
 		</ul>
-	</div>
-</div>
+
+
 
 <div class="content1">
 	<h1>About</h1>
@@ -531,12 +575,12 @@ button:hover {
 
 Tasks accompanying and related to programming include: testing, debugging, source code maintenance, implementation of build systems, and management of derived artifacts, such as the machine code of computer programs. These might be considered part of the programming process, but often the term software development is used for this larger process with the term programming, implementation, or coding reserved for the actual writing of code. Software engineering combines engineering techniques with software development practices. Reverse engineering is a related process used by designers, analysts and programmers to understand and re-create/re-implement</p>
 </div>
-
+</div>
 
 
 <div class="container2" id="blog">
-		<div class="header">
-			<div class="content1"><h1>Blog</h1></div>
+		<div class="header2">
+			<div class="content2"><h1>Blog</h1></div>
 
 		</div>
 
@@ -623,8 +667,9 @@ Tasks accompanying and related to programming include: testing, debugging, sourc
 	</div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="container3" id="contact">
-		<h1>Contact Us</h1>
+		
 	<div class="isi">
+		<h1>Contact Us</h1>
 		<br>
 		<div><i class="fas fa-map-marker-alt">Jakarta, Indonesia</i></div>
 		<div><i class="fas fa-envelope">ProgrammerXTO@gmail.com</i></div>
@@ -633,7 +678,23 @@ Tasks accompanying and related to programming include: testing, debugging, sourc
 	</div>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script>
+	
+	const navSlide = () => {
+		const burger = document.querySelector('.burger');
+		const nav = document.querySelector('.navlink');
+
+		burger.addEventListener('click',()=> {
+			nav.classList.toggle('navaktif');
+		});
+	}
+
+	navSlide();
+
+</script>
+
 
 </body>
 </html>
